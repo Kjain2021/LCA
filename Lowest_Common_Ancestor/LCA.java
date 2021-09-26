@@ -33,22 +33,20 @@ class lca {
     public static Node lca(Node root, int search1, int search2) {
         if (root == null) {
             return null;
-        }
-    }else if(root.data==search1||root.data==search2)
+        } else if (root.data == search1 || root.data == search2)
 
-    {
+        {
+            return root;
+        }
+        // lca is on left subtree
+        else if (root.data > search1 && root.data > search2) {
+            return lca(root.left, search1, search2);
+        }
+        // lca is on right
+        else if (root.data < search1 && root.data < search2) {
+            return lca(root.right, search1, search2);
+        }
         return root;
-    }
-    // lca is on left subtree
-    else if(root.data>search1&&root.data>search2)
-    {
-        return lca(root.left, search1, search2);
-    }
-    // lca is on right
-    else if(root.data<search1&&root.data<search2)
-    {
-        return lca(root.right, search1, search2);
-    }return root;
     }
 
     // as per the constrains no value shall be repeated in the tree and nodes need
