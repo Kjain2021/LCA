@@ -14,11 +14,11 @@ public class lcaTest {
     @Test
     public void testLCA() {
 
-        // 45
-        // / \
-        // 10 80
-        // /\ /
-        // 7 12 50
+        //     45
+        //  /     \
+        // 10    80
+        // /\    /
+        //7 12 50
         // Testing when the root is the LCA, incomplete tree, and
         lca bst = new lca();
         bst.insert(45);
@@ -30,11 +30,11 @@ public class lcaTest {
         assertEquals("The lowest common ancestor of 7 and 80 is:", 45, (lca.lcaSol(bst.root, 7, 80).data));
 
         // Testing when the tree is complete, LCA is root
-        // 45
-        // / \
+        //  45
+        //  / \
         // 10 80
         // /\ / \
-        // 7 12 50 90
+        //7 12 50 90
         bst.insert(90);
         assertEquals("The lowest common ancestor of 7 and 90 is:", 45, (lca.lcaSol(bst.root, 7, 90).data));
 
@@ -54,12 +54,12 @@ public class lcaTest {
     public void TestOneChild() {
         // Testing when have one child
         // 1
-        // \
-        // 2
-        // \
-        // 3
-        // \
-        // 4
+        //  \
+        //   2
+        //    \
+        //     3
+        //      \
+        //       4
         lca bst2 = new lca();
         bst2.insert(1);
         bst2.insert(2);
@@ -67,11 +67,11 @@ public class lcaTest {
         bst2.insert(4);
         assertEquals("The lowest common ancestor of 3 and 4 is:", 3, (lca.lcaSol(bst2.root, 3, 4).data));
 
-        // 2
+        //  2
         // / \
-        // 1 3
-        // \
-        // 4
+        // 1  3
+        //    \
+        //     4
 
         lca bst3 = new lca();
         bst3.insert(2);
