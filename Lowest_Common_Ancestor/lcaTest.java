@@ -14,8 +14,8 @@ public class lcaTest {
     @Test
     public void testLCA() {
 
-        //     45
-        //  /     \
+        //    45
+        //  /    \
         // 10    80
         // /\    /
         //7 12 50
