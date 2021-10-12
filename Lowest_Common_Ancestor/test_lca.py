@@ -4,9 +4,9 @@ from LCA import *
 
 class Test(TestCase):
     def test_bst(self):
-    #when root is not defined in BST
-     tree=BST()
-     self.assertEqual((tree.root),None)
+        # when root is not defined in BST
+        tree=BST()
+        self.assertEqual((tree.root),None)
 
 
     def test_lca(self):
@@ -79,6 +79,14 @@ class Test(TestCase):
         tree.build(3)
         tree.build(4)
         self.assertEqual(lca(tree.root, 3, 4).info, 3)
+
+
+
+
+
+
+
+
 
 
 
