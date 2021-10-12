@@ -1,7 +1,7 @@
 The first commit that is LCA.java empty file being created by the other user Khushboojain236 is my other personal account. I only realised later I hadn't changed accounts before committing to this git account.
 
 The current implementation:
-It is a basic implementation of finding the Lowest Common Ancestor in a Binary Search Tree.It has been coded in Java and Python based on the same recursive implementation. The test cases are used to check the implementation. The change made is that now a tree is being created as an object rather than just adding nodes to the structure. The two assumptions still hold true :
+It is a basic implementation of finding the Lowest Common Ancestor in a Binary Search Tree.It has been coded in Java and Python based on the same recursive implementation. The test cases are used to check the implementation. The change made is that now a tree is being created as an object rather than just adding nodes to the structure. Has no error handling. The two assumptions still hold true :
 1. Each node is unique. 
 2. The nodes for which we are searching the LCA, are unique and exist in the tree. 
 
