@@ -45,19 +45,27 @@ def lca(root, search1, search2):
         return root
     return root
 
-tree = BST()
-print("Enter the number of nodes")
-size= int(input())
+#for building tree
+#tree = BST()
+#tree.build(2)
+#tree.build(1)
+#tree.build(3)
 
-# takes node values 
-print("Enter Values")
-for i in range(size):
-    values = int(input())
-    tree.build(values)
+#intial build using user input
+# print("Enter the number of nodes")
+# size= int(input())
 
-print("First node for lca:")
-search1 = int(input())
-print("Second node for lca:")
-search2 = int(input())
-result = lca(tree.root, search1, search2)
-print(result.info)
+# takes node values
+#print("Enter Values")
+#for i in range(size):
+    #values = int(input())
+    #tree.build(values)
+
+
+#print("First node for lca:")
+#search1 = int(input())
+#print("Second node for lca:")
+#search2 = int(input())
+#result = lca(tree.root, search1, search2)
+#print(result.info)
+
