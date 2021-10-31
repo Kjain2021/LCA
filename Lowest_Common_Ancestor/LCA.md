@@ -11,3 +11,6 @@ It is a basic implementation of finding the Lowest Common Ancestor in a Binary S
 There are a few assumptions on which the implementation is based:
 1. Each node is unique. 
 2. The nodes for which we are searching the LCA, are unique and exist in the tree. 
+
+
+The DAG implementation has been done in Python. So, please look at the python files. 
