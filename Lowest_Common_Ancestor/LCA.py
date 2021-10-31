@@ -45,6 +45,38 @@ def lca(root, search1, search2):
         return root
     return root
 
+class DAGNode:
+    def __init__(self, info):
+        self.info = info
+        self.suc = []
+        self.pre = []
+
+
+def dag_lca(root, search1, search2):
+    if type(root) != DAGNode or type(search1) != DAGNode or type(search2) != DAGNode:
+        return None
+    if root is None:
+        return None
+    if root == search1 or root == search2:
+        return root
+    if search1 == search2:
+        return search1.info
+
+    result = []
+    for i in range(len(search1.pre)):
+        for j in range(len(search2.pre)):
+            if (search1.pre[i].info == search2.pre[j].info):
+                result.append(search1.pre[i].info)
+
+    if (result == []):
+        if (search1.info > search2.info):
+            result.append(dag_lca(root, search1.pre[0], search2))
+        else:
+            result.append(dag_lca(root, search1, search2.pre[0]))
+
+    return max(result)
+
+
 #for building tree
 #tree = BST()
 #tree.build(2)
